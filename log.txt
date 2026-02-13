@@ -1,0 +1,63 @@
+
+PLAY [Установка WordPress со стеком LAMP] **************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [apache : Установка Apache] ***********************************************
+changed: [localhost]
+
+TASK [apache : Включение модуля rewrite] ***************************************
+changed: [localhost]
+
+TASK [apache : Копирование конфигурации виртуального хоста] ********************
+changed: [localhost]
+
+TASK [apache : Включение сайта] ************************************************
+changed: [localhost]
+
+TASK [apache : Отключение дефолтного сайта] ************************************
+changed: [localhost]
+
+TASK [mysql : Установка MySQL сервера и клиента] *******************************
+changed: [localhost]
+
+TASK [mysql : Запуск и включение MySQL] ****************************************
+ok: [localhost]
+
+TASK [mysql : Установка пароля для root] ***************************************
+changed: [localhost]
+
+TASK [mysql : Удаление анонимных пользователей] ********************************
+ok: [localhost]
+
+TASK [mysql : Создание базы данных для WordPress] ******************************
+changed: [localhost]
+
+TASK [mysql : Создание пользователя для WordPress] *****************************
+changed: [localhost]
+
+TASK [php : Установка PHP и модулей] *******************************************
+changed: [localhost]
+
+TASK [wordpress : Создание директории для WordPress] ***************************
+changed: [localhost]
+
+TASK [wordpress : Скачивание WordPress] ****************************************
+changed: [localhost]
+
+TASK [wordpress : Распаковка WordPress] ****************************************
+changed: [localhost]
+
+TASK [wordpress : Копирование файлов в целевую директорию] *********************
+changed: [localhost]
+
+TASK [wordpress : Создание конфигурации wp-config.php из шаблона] **************
+changed: [localhost]
+
+RUNNING HANDLER [php : restart apache] *****************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=19   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

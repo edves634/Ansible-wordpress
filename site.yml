@@ -1,0 +1,9 @@
+---
+- name: Установка WordPress со стеком LAMP
+  hosts: wordpress
+  become: yes
+  roles:
+    - apache
+    - mysql
+    - php
+    - wordpress

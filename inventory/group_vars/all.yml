@@ -1,0 +1,5 @@
+---
+mysql_root_password: "StrongRootPass123"
+wordpress_db_name: "wordpress"
+wordpress_db_user: "wpuser"
+wordpress_db_password: "StrongWpPass456"

@@ -1,0 +1,27 @@
+---
+- name: Установка Apache
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+  notify: restart apache
+
+- name: Включение модуля rewrite
+  ansible.builtin.shell:
+    cmd: a2enmod rewrite
+  notify: restart apache
+
+- name: Копирование конфигурации виртуального хоста
+  ansible.builtin.template:
+    src: wordpress.conf.j2
+    dest: /etc/apache2/sites-available/wordpress.conf
+  notify: restart apache
+
+- name: Включение сайта
+  ansible.builtin.shell:
+    cmd: a2ensite wordpress.conf
+  notify: restart apache
+
+- name: Отключение дефолтного сайта
+  ansible.builtin.shell:
+    cmd: a2dissite 000-default.conf
+  notify: restart apache
