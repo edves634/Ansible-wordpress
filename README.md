@@ -5,34 +5,37 @@
 
 ## Структура проекта
 
-```
-- ansible-wordpress/
-  - inventory/
-    - hosts
-    - group_vars/
-      - all.yml
-  - roles/
-    - apache/
-      - tasks/
-        - main.yml
-      - handlers/
-        - main.yml
-      - templates/
-        - wordpress.conf.j2
-    - mysql/
-      - tasks/
-        - main.yml
-    - php/
-      - tasks/
-        - main.yml
-    - wordpress/
-      - tasks/
-        - main.yml
-      - templates/
-        - wp-config.php.j2
-  - site.yml
-  - log.txt
-  - README.md
+ansible-wordpress/
+├── inventory/
+│   ├── hosts
+│   └── group_vars/
+│       └── all.yml
+├── roles/
+│   ├── apache/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   │   └── main.yml
+│   │   └── templates/
+│   │       └── wordpress.conf.j2
+│   ├── mysql/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   └── handlers/
+│   │       └── main.yml
+│   ├── php/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   └── handlers/
+│   │       └── main.yml
+│   └── wordpress/
+│       ├── tasks/
+│       │   └── main.yml
+│       └── templates/
+│           └── wp-config.php.j2
+├── site.yml
+├── log.txt
+└── README.md
 
 ## Переменные (inventory/group_vars/all.yml)
 
