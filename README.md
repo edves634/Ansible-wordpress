@@ -3,40 +3,6 @@
 
 Проект для автоматической установки WordPress (Apache + MySQL + PHP) на Debian/Ubuntu с помощью Ansible.
 
-## Структура проекта
-
-ansible-wordpress/
-├── inventory/
-│   ├── hosts
-│   └── group_vars/
-│       └── all.yml
-├── roles/
-│   ├── apache/
-│   │   ├── tasks/
-│   │   │   └── main.yml
-│   │   ├── handlers/
-│   │   │   └── main.yml
-│   │   └── templates/
-│   │       └── wordpress.conf.j2
-│   ├── mysql/
-│   │   ├── tasks/
-│   │   │   └── main.yml
-│   │   └── handlers/
-│   │       └── main.yml
-│   ├── php/
-│   │   ├── tasks/
-│   │   │   └── main.yml
-│   │   └── handlers/
-│   │       └── main.yml
-│   └── wordpress/
-│       ├── tasks/
-│       │   └── main.yml
-│       └── templates/
-│           └── wp-config.php.j2
-├── site.yml
-├── log.txt
-└── README.md
-
 ## Переменные (inventory/group_vars/all.yml)
 
 ```yaml
